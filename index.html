@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Teste HTML — MarioBrosAI</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      font-family: system-ui, sans-serif;
+      background: #101827;
+      color: #f8fafc;
+    }
+    body {
+      min-height: 100vh;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      padding: 1.5rem;
+      box-sizing: border-box;
+    }
+    main {
+      width: min(100%, 34rem);
+      padding: 2rem;
+      border: 1px solid #334155;
+      border-radius: 1rem;
+      background: #1e293b;
+      text-align: center;
+      box-shadow: 0 1rem 3rem #0005;
+    }
+    h1 { color: #facc15; }
+    p { color: #cbd5e1; line-height: 1.6; }
+    button {
+      border: 0;
+      border-radius: .6rem;
+      padding: .8rem 1.2rem;
+      background: #ef4444;
+      color: white;
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    button:hover { background: #dc2626; }
+    #resultado { min-height: 1.5em; color: #86efac; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Teste HTML</h1>
+    <p>Esta página de teste do projeto MarioBrosAI está funcionando.</p>
+    <button id="botao-teste" type="button">Testar botão</button>
+    <p id="resultado" aria-live="polite"></p>
+  </main>
+  <script>
+    document.querySelector('#botao-teste').addEventListener('click', () => {
+      document.querySelector('#resultado').textContent = 'Tudo certo! O JavaScript também está funcionando.';
+    });
+  </script>
+</body>
+</html>
